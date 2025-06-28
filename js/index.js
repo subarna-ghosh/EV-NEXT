@@ -92,47 +92,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//offering-cards-slider
-$(document).ready(function () {
-  $(".offering-slider-section").slick({
-    centerMode: true,
-    centerPadding: "40px",
-    slidesToShow: 3,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    // pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "20px",
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "20px",
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-});
-
 //Counter Section
 const counters = document.querySelectorAll(".counter");
 let started = false;
@@ -171,70 +130,63 @@ const observer = new IntersectionObserver(
 observer.observe(document.querySelector(".stats-section"));
 
 
-
 //our-team-slider-section
-$(document).ready(function () {
-  $(".our-team-slider").slick({
-    slidesToShow: 4,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          arrows: false,
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1, //mobile screen
+  centeredSlides: false,
+  spaceBetween: 30,
+  // loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    1025: {
+      slidesPerView: 4,
+    },
+    769: {
+      slidesPerView: 3,
+    },
+    576: {
+      slidesPerView: 2,
+    },
+  },
 });
-
-
 
 //clients-review-slider
-$(document).ready(function () {
-  $(".client-slider-section").slick({
-    slidesToShow: 1,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-        },
-      },
-    ],
-  });
-});
+const swiperClient = new Swiper(".swiperClient", {
+  slidesPerView: 1, //mobile screen
+  centeredSlides: false,
+  spaceBetween: 30,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+  },
+});
 //accordian section
 $(document).ready(function () {
   $(".header1").click(function () {
