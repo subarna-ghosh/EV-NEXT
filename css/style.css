@@ -1739,10 +1739,6 @@ Why Choose Us Section
   color: var(--text-color);
 }
 
-/* .why-choose-us-block-slider {
-    display: none;
-} */
-
 /*
 ===================
 Appointment Section
@@ -2011,6 +2007,21 @@ Appointment Section
   width: 32px;
   height: 32px;
   object-fit: cover;
+}
+/* Brand Section */
+.brand-section {
+  justify-content: space-between;
+}
+
+.brand-select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  height: 52px;
+  border: none;
+  outline: none;
+  background: transparent;
+  appearance: none;
 }
 
 /* Radio Section */
@@ -4484,6 +4495,9 @@ Footer Section
   .col-033 {
     width: 50%;
   }
+  .brand-select {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -4635,6 +4649,10 @@ Footer Section
 
   .form-cont {
     margin-bottom: 20px;
+  }
+
+  .brand-select {
+    height: 43px;
   }
 
   .col-46,
