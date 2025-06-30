@@ -58,6 +58,7 @@
   --swiper-theme-color: white;
 }
 
+html,
 body {
   overflow-x: hidden;
 }
@@ -3100,12 +3101,34 @@ clients Review Section
 .swiper-slide {
   text-align: start;
 }
+
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: var(--swiper-pagination-bottom, 4px);
 }
+
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 5px)
+  ) !important;
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 5px)
+  ) !important;
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+  background: white !important;
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
+}
+.swiper-pagination-bullet-active {
+  width: 27px !important;
+  height: 5px !important;
+  border-radius: 10px !important;
+}
+
 .review-block {
   width: 514px;
   min-height: 284px;
