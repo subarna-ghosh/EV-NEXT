@@ -63,6 +63,20 @@ body {
   overflow-x: hidden;
 }
 
+/* Universal Cursor */
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
 /*
 ===================
 Common Classes
